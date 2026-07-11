@@ -4,6 +4,8 @@ import { useMemo, useState } from "react";
 import clsx from "clsx";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
+import { Confetti } from "@/components/ui/Confetti";
+import { useCountUp } from "@/hooks/useCountUp";
 import { DataTable, DataTableColumn } from "./DataTable";
 import { CRM_FIELD_LABELS, CRM_FIELD_ORDER, CrmRecord, ImportResult } from "@/lib/types";
 import { downloadCsv, recordsToCsv } from "@/lib/exportCsv";
@@ -36,27 +38,30 @@ function StatCard({
   delay: string;
 }) {
   const iconClasses = {
-    brand: "bg-[var(--brand-soft)] text-[var(--brand)]",
-    accent: "bg-[var(--accent-soft)] text-[var(--accent)]",
+    brand: "bg-gradient-to-br from-[var(--brand)] to-[var(--brand-2)] text-white shadow-[0_6px_14px_-4px_var(--brand-glow)]",
+    accent: "bg-gradient-to-br from-[var(--accent)] to-[var(--accent-2)] text-white shadow-[0_6px_14px_-4px_var(--accent-glow)]",
     danger: "bg-red-50 text-red-500 dark:bg-red-500/10 dark:text-red-400",
     neutral: "bg-[var(--background)] text-[var(--muted)]",
   }[tone];
 
+  const numeric = typeof value === "number" ? value : null;
+  const animated = useCountUp(numeric ?? 0, 1000);
+
   return (
     <div
       className={clsx(
-        "anim-fade-up group rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-4 shadow-[var(--card-shadow)] transition-shadow hover:shadow-[var(--card-shadow-hover)] sm:p-5",
+        "card-tilt anim-fade-up group rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-4 shadow-[var(--card-shadow)] hover:shadow-[var(--card-shadow-hover)] sm:p-5",
         delay
       )}
     >
       <div className="flex items-center justify-between">
         <p className="text-[11px] font-bold uppercase tracking-wider text-[var(--muted)]">{label}</p>
-        <span className={clsx("flex h-8 w-8 items-center justify-center rounded-lg transition-transform group-hover:scale-110", iconClasses)}>
+        <span className={clsx("flex h-8 w-8 items-center justify-center rounded-lg transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6", iconClasses)}>
           {icon}
         </span>
       </div>
-      <p className="anim-count-pop mt-2 text-3xl font-extrabold tabular-nums tracking-tight text-[var(--foreground)]">
-        {value}
+      <p className="mt-2 text-3xl font-extrabold tabular-nums tracking-tight text-[var(--foreground)]">
+        {numeric !== null ? animated.toLocaleString() : value}
       </p>
       {sub && <p className="mt-0.5 text-[11px] font-medium text-[var(--muted)]">{sub}</p>}
     </div>
@@ -104,10 +109,12 @@ export function ResultsStep({ result, onReset }: Props) {
   }
 
   return (
-    <div className="anim-fade-in">
+    <div className="anim-fade-in relative">
+      {result.totalImported > 0 && <Confetti />}
+
       {/* success banner */}
-      <div className="anim-scale-in mb-6 flex items-center gap-3.5 rounded-2xl border border-[var(--brand-soft)] bg-[var(--brand-soft)]/70 px-5 py-4">
-        <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[var(--brand)] text-white shadow-[0_6px_16px_-4px_var(--brand-glow)]">
+      <div className="anim-scale-in mb-6 flex items-center gap-3.5 overflow-hidden rounded-2xl border border-[var(--brand-soft)] bg-gradient-to-r from-[var(--brand-soft)] to-transparent px-5 py-4">
+        <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-[var(--brand)] to-[var(--brand-2)] text-white shadow-[0_6px_16px_-4px_var(--brand-glow)]">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6">
             <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
           </svg>

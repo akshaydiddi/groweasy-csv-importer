@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useState } from "react";
+import { MouseEvent as ReactMouseEvent, useCallback, useRef, useState } from "react";
 import { FileRejection, useDropzone } from "react-dropzone";
 import clsx from "clsx";
 import { CsvValidationError, validateCsvFile } from "@/lib/csv";
@@ -24,6 +24,15 @@ const SOURCE_CHIPS = [
 
 export function UploadStep({ onFileAccepted }: Props) {
   const [error, setError] = useState<string | null>(null);
+  const dropRef = useRef<HTMLDivElement>(null);
+
+  const handlePointerMove = useCallback((e: ReactMouseEvent<HTMLDivElement>) => {
+    const el = dropRef.current;
+    if (!el) return;
+    const rect = el.getBoundingClientRect();
+    el.style.setProperty("--glow-x", `${e.clientX - rect.left}px`);
+    el.style.setProperty("--glow-y", `${e.clientY - rect.top}px`);
+  }, []);
 
   const onDrop = useCallback(
     (accepted: File[], rejections: FileRejection[]) => {
@@ -65,6 +74,8 @@ export function UploadStep({ onFileAccepted }: Props) {
   return (
     <div className="anim-fade-up mx-auto max-w-3xl">
       <div
+        ref={dropRef}
+        onMouseMove={handlePointerMove}
         {...getRootProps()}
         className={clsx(
           "group relative isolate flex cursor-pointer flex-col items-center justify-center gap-5 overflow-hidden rounded-3xl border-2 border-dashed px-8 py-16 text-center transition-all duration-300 sm:py-20",
@@ -78,17 +89,27 @@ export function UploadStep({ onFileAccepted }: Props) {
         {/* decorative dotted grid */}
         <div aria-hidden className="dot-grid pointer-events-none absolute inset-0 -z-10 opacity-70" />
 
+        {/* cursor-follow glow */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 -z-10 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+          style={{
+            background:
+              "radial-gradient(280px circle at var(--glow-x, 50%) var(--glow-y, 50%), var(--accent-soft), transparent 70%)",
+          }}
+        />
+
         <div
           className={clsx(
-            "anim-float relative flex h-20 w-20 items-center justify-center rounded-2xl transition-transform duration-300 group-hover:scale-105",
-            "bg-gradient-to-br from-[var(--accent)] to-[#e8552c] text-white shadow-[0_12px_28px_-8px_var(--accent-glow)]"
+            "anim-float relative flex h-20 w-20 items-center justify-center rounded-2xl transition-transform duration-300 group-hover:scale-105 group-hover:rotate-3",
+            "bg-gradient-to-br from-[var(--accent)] to-[var(--accent-2)] text-white shadow-[0_12px_28px_-8px_var(--accent-glow)]"
           )}
         >
           <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <path strokeLinecap="round" strokeLinejoin="round" d="M12 16V4m0 0L7 9m5-5l5 5" />
             <path strokeLinecap="round" strokeLinejoin="round" d="M20 16.5v2.25A2.25 2.25 0 0117.75 21H6.25A2.25 2.25 0 014 18.75V16.5" />
           </svg>
-          <span className="absolute -right-1.5 -top-1.5 flex h-6 w-6 items-center justify-center rounded-full bg-[var(--brand)] text-[10px] font-bold text-white shadow-md">
+          <span className="absolute -right-1.5 -top-1.5 flex h-6 w-6 items-center justify-center rounded-full bg-gradient-to-br from-[var(--brand)] to-[var(--brand-2)] text-[10px] font-bold text-white shadow-md">
             AI
           </span>
         </div>
@@ -114,11 +135,18 @@ export function UploadStep({ onFileAccepted }: Props) {
             <span
               key={chip.label}
               className={clsx(
-                "anim-fade-up inline-flex items-center gap-1.5 rounded-lg border border-[var(--border)] bg-[var(--surface)] px-2.5 py-1 text-[11px] font-medium text-[var(--muted)] transition-colors group-hover:border-[var(--border-strong)]",
+                "anim-fade-up inline-flex items-center gap-1.5 rounded-lg border border-[var(--border)] bg-[var(--surface)] px-2.5 py-1 text-[11px] font-medium text-[var(--muted)] transition-all duration-200 hover:-translate-y-0.5 hover:border-[var(--border-strong)] hover:shadow-sm group-hover:border-[var(--border-strong)]",
                 `stagger-${Math.min(i + 1, 4)}`
               )}
             >
-              <span className="flex h-4 w-4 items-center justify-center rounded bg-[var(--brand-soft)] text-[9px] font-bold text-[var(--brand)]">
+              <span
+                className="flex h-4 w-4 items-center justify-center rounded text-[9px] font-bold text-white"
+                style={{
+                  background: `linear-gradient(135deg, ${
+                    i % 2 === 0 ? "var(--brand), var(--brand-2)" : "var(--accent), var(--accent-2)"
+                  })`,
+                }}
+              >
                 {chip.icon}
               </span>
               {chip.label}

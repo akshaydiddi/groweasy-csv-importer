@@ -44,7 +44,7 @@ export function ProcessingStep({ rowCount }: { rowCount: number }) {
         >
           <span className="absolute -bottom-0.5 left-1/2 h-2 w-2 -translate-x-1/2 rounded-full bg-[var(--brand)] shadow-[0_0_10px_var(--brand-glow)]" />
         </div>
-        <div className="absolute inset-5 flex items-center justify-center rounded-full bg-gradient-to-br from-[var(--accent)] to-[#e8552c] text-white shadow-[0_10px_26px_-8px_var(--accent-glow)]">
+        <div className="absolute inset-5 flex items-center justify-center rounded-full bg-gradient-to-br from-[var(--accent)] to-[var(--accent-2)] text-white shadow-[0_10px_26px_-8px_var(--accent-glow)]">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" />
           </svg>
