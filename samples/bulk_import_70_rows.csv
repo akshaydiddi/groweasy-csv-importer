@@ -1,0 +1,73 @@
+created_at,name,email,mobile,city,company,status,source_campaign,remarks
+2026-06-15 12:58:00,Aditya Malhotra,aditya.malhotra0@example.com,9175043179,Chennai,TCS,Follow Up,Meridian Tower - Search,No response after 2 calls
+2026-06-11 16:21:00,Isha Iyer,isha.iyer1@example.com,9713179998,Jaipur,GrowEasy,Booked,Eden Park - Display,
+2026-06-14 14:24:00,Isha Iyer,isha.iyer2@example.com,9199467382,Mumbai,GrowEasy,Qualified,Varah Swamy - Display,Ready to visit site
+2026-06-14 15:35:00,Varun Nair,varun.nair3@example.com,9216975960,Delhi,,Junk,Eden Park - Display,
+2026-06-08 14:14:00,Dev Chopra,dev.chopra4@example.com,9330944109,Delhi,Wipro,Booked,,Very interested in 3BHK
+2026-06-17 12:03:00,Sara Iyer,sara.iyer5@example.com,9847033516,Hyderabad,,No Answer,Eden Park - Display,
+2026-06-27 18:59:00,Diya Verma,diya.verma6@example.com,9692707156,Mumbai,,Follow Up,Meridian Tower - Search,Asked for brochure
+2026-06-15 17:54:00,Navya Chopra,navya.chopra7@example.com,9639688755,Ahmedabad,Startup Inc,Follow Up,Eden Park - Display,Budget too low
+2026-06-07 14:27:00,Siddharth Verma,siddharth.verma8@example.com,9752498272,Chennai,GrowEasy,Qualified,Meridian Tower - Search,Requested video walkthrough
+2026-06-12 08:25:00,Sara Joshi,sara.joshi9@example.com,9367373531,Ahmedabad,Infosys,Qualified,Meridian Tower - Search,No response after 2 calls
+2026-06-01 13:52:00,Ritvik Mehta,ritvik.mehta10@example.com,9849875858,Mumbai,,Not Interested,Leads On Demand - General,Very interested in 3BHK
+2026-06-15 11:47:00,Nikhil Malhotra,nikhil.malhotra11@example.com,9994591466,Chennai,Tech Solutions,Contacted,,Wants EMI details
+2026-06-24 17:23:00,Aryan Das,aryan.das12@example.com,9598824834,Pune,Tech Solutions,No Answer,,Budget too low
+2026-06-03 12:09:00,Arjun Joshi,,9966904252,Chennai,Enterprise Corp,No Answer,Sarjapur Plots - Search,No response after 2 calls
+2026-06-11 16:04:00,Navya Gupta,navya.gupta14@example.com,9151380000,Chennai,Tech Solutions,Contacted,Meridian Tower - Search,Requested video walkthrough
+2026-06-14 15:42:00,Isha Verma,isha.verma15@example.com,9803146045,Delhi,TCS,No Answer,,Very interested in 3BHK
+2026-06-20 08:45:00,Aadhya Reddy,aadhya.reddy16@example.com,9110639351,Jaipur,,Contacted,Meridian Tower - Search,Very interested in 3BHK
+2026-06-05 13:59:00,Simran Rao,simran.rao17@example.com,,Pune,Enterprise Corp,Not Interested,Sarjapur Plots - Search,Requested video walkthrough
+2026-06-04 12:07:00,Karan Singh,karan.singh18@example.com,9854505815,Jaipur,Wipro,Qualified,Eden Park - Display,Will call back next week
+2026-06-19 16:12:00,Pooja Patel,pooja.patel19@example.com,9184774870,Chennai,,Junk,Eden Park - Display,Wants EMI details
+2026-06-01 11:54:00,Aarav Das,aarav.das20@example.com,9942004117,Mumbai,Infosys,Follow Up,Leads On Demand - General,Wants EMI details
+2026-06-01 13:07:00,Aryan Singh,aryan.singh21@example.com,9348657462,Hyderabad,,Contacted,Leads On Demand - General,Wants EMI details
+2026-06-13 12:50:00,Priya Joshi,priya.joshi22@example.com,9109799520,Chennai,,Booked,,Very interested in 3BHK
+2026-06-08 08:20:00,Kavya Gupta,kavya.gupta23@example.com,9920144742,Kochi,Wipro,No Answer,Varah Swamy - Display,Very interested in 3BHK
+2026-06-05 14:28:00,Aisha Shah,aisha.shah24@example.com,9732720432,Jaipur,,Qualified,Varah Swamy - Display,Very interested in 3BHK
+2026-06-09 18:02:00,Rohan Mehta,rohan.mehta25@example.com,9648536393,Mumbai,GrowEasy,Junk,Varah Swamy - Display,Budget too low
+2026-06-16 17:04:00,Anika Kapoor,anika.kapoor26@example.com,9601052901,Mumbai,Tech Solutions,Contacted,Varah Swamy - Display,
+2026-06-25 13:20:00,Neha Kapoor,neha.kapoor27@example.com,9152779657,Kochi,,Booked,,No response after 2 calls
+2026-06-10 10:11:00,Rohan Iyer,rohan.iyer28@example.com,9542849045,Kolkata,,Contacted,Eden Park - Display,Ready to visit site
+2026-06-15 18:10:00,Kabir Menon,kabir.menon29@example.com,9525483922,Mumbai,Tech Solutions,Booked,Varah Swamy - Display,Requested video walkthrough
+2026-06-24 09:29:00,Yash Malhotra,yash.malhotra30@example.com,9864986544,Kochi,Wipro,Junk,,Ready to visit site
+2026-06-14 08:58:00,Pooja Verma,pooja.verma31@example.com,9474923564,Delhi,,Contacted,Leads On Demand - General,
+2026-06-18 08:32:00,Nikhil Singh,,9536241164,Chennai,Tech Solutions,New,Leads On Demand - General,
+2026-06-09 09:29:00,Zoya Shah,zoya.shah33@example.com,9894347402,Kolkata,Enterprise Corp,Follow Up,Varah Swamy - Display,Very interested in 3BHK
+2026-06-28 18:09:00,Aryan Pillai,aryan.pillai34@example.com,9547292842,Ahmedabad,GrowEasy,Not Interested,Eden Park - Display,Asked for brochure
+2026-06-16 13:22:00,Rohan Kapoor,rohan.kapoor35@example.com,9418178730,Mumbai,Enterprise Corp,Contacted,Eden Park - Display,No response after 2 calls
+2026-06-02 16:00:00,Kabir Nair,kabir.nair36@example.com,9184568761,Jaipur,,New,Sarjapur Plots - Search,Requested video walkthrough
+2026-06-08 16:50:00,Sara Chopra,sara.chopra37@example.com,9358989470,Pune,TCS,Qualified,Varah Swamy - Display,Asked for brochure
+2026-06-19 15:13:00,Dev Bose,dev.bose38@example.com,9859421450,Bangalore,TCS,Contacted,Varah Swamy - Display,Asked for brochure
+2026-06-17 14:22:00,Riya Das,riya.das39@example.com,9226998371,Kochi,,Contacted,Sarjapur Plots - Search,Ready to visit site
+2026-06-06 17:41:00,Vivaan Nair,vivaan.nair40@example.com,9369791260,Kolkata,TCS,Not Interested,Sarjapur Plots - Search,Wants EMI details
+2026-06-20 17:11:00,Vihaan Chopra,vihaan.chopra41@example.com,9147249608,Jaipur,,Qualified,Varah Swamy - Display,
+2026-06-02 17:14:00,Krishna Verma,krishna.verma42@example.com,9760285086,Jaipur,Startup Inc,Not Interested,,Wants EMI details
+2026-06-05 08:21:00,Nikhil Joshi,nikhil.joshi43@example.com,9590215764,Jaipur,,Contacted,,Wants EMI details
+2026-06-25 13:12:00,Diya Reddy,diya.reddy44@example.com,9568712857,Mumbai,Infosys,Follow Up,Varah Swamy - Display,Asked for brochure
+2026-06-25 14:21:00,Aryan Nair,aryan.nair45@example.com,9723859543,Mumbai,,No Answer,Varah Swamy - Display,Very interested in 3BHK
+2026-06-06 11:14:00,Myra Pillai,myra.pillai46@example.com,,Jaipur,,Contacted,Meridian Tower - Search,Asked for brochure
+2026-06-11 13:28:00,Ishaan Shah,ishaan.shah47@example.com,9702807530,Kochi,Tech Solutions,Junk,Sarjapur Plots - Search,
+2026-06-06 18:57:00,Navya Singh,navya.singh48@example.com,9855197659,Kochi,Infosys,Follow Up,Meridian Tower - Search,Ready to visit site
+2026-06-18 08:16:00,Nikhil Gupta,nikhil.gupta49@example.com,9373801149,Chennai,Startup Inc,Follow Up,Leads On Demand - General,Very interested in 3BHK
+2026-06-03 13:06:00,Aadhya Joshi,aadhya.joshi50@example.com,9723633780,Delhi,Startup Inc,Not Interested,Varah Swamy - Display,Budget too low
+2026-06-13 18:04:00,Simran Menon,simran.menon51@example.com,9413515599,Mumbai,Enterprise Corp,No Answer,Sarjapur Plots - Search,Very interested in 3BHK
+2026-06-08 18:00:00,Neha Bose,neha.bose52@example.com,9819805953,Pune,TCS,Not Interested,,Will call back next week
+2026-06-13 13:43:00,Ayaan Singh,ayaan.singh53@example.com,9412061202,Delhi,,Follow Up,Leads On Demand - General,Very interested in 3BHK
+2026-06-25 13:52:00,Dev Rao,dev.rao54@example.com,9787565217,Hyderabad,Wipro,Contacted,,
+2026-06-04 16:28:00,Rohan Iyer,rohan.iyer55@example.com,9765655620,Mumbai,,Not Interested,Varah Swamy - Display,Requested video walkthrough
+2026-06-03 16:51:00,Isha Chopra,isha.chopra56@example.com,9480101755,Jaipur,,New,Varah Swamy - Display,No response after 2 calls
+2026-06-03 15:47:00,Myra Patel,myra.patel57@example.com,9573650830,Kolkata,Infosys,Not Interested,,Will call back next week
+2026-06-12 16:13:00,Nikhil Joshi,nikhil.joshi58@example.com,9758993516,Mumbai,TCS,Junk,Varah Swamy - Display,Will call back next week
+2026-06-01 11:20:00,Aarav Pillai,aarav.pillai59@example.com,9595457102,Kochi,Startup Inc,New,Meridian Tower - Search,Budget too low
+2026-06-06 08:54:00,Sara Iyer,sara.iyer60@example.com,9402462787,Mumbai,Tech Solutions,Booked,Meridian Tower - Search,Wants EMI details
+2026-06-06 09:59:00,Kiara Pillai,kiara.pillai61@example.com,9682177453,Ahmedabad,TCS,Junk,,Very interested in 3BHK
+2026-06-12 16:37:00,Siddharth Gupta,,9646502642,Mumbai,,Contacted,,Requested video walkthrough
+2026-06-02 16:56:00,Myra Gupta,myra.gupta63@example.com,9758796050,Mumbai,Wipro,No Answer,Sarjapur Plots - Search,Wants EMI details
+2026-06-19 10:41:00,Tanvi Shah,tanvi.shah64@example.com,9439880801,Delhi,Infosys,Contacted,,
+2026-06-13 16:26:00,Varun Menon,varun.menon65@example.com,9919890677,Mumbai,,Junk,Leads On Demand - General,No response after 2 calls
+2026-06-03 11:34:00,Anika Joshi,anika.joshi66@example.com,9534473965,Jaipur,,No Answer,Meridian Tower - Search,Ready to visit site
+2026-06-17 17:36:00,Diya Bose,diya.bose67@example.com,9834467120,Mumbai,Startup Inc,Qualified,,Ready to visit site
+2026-06-04 17:43:00,Riya Reddy,riya.reddy68@example.com,9922464373,Ahmedabad,GrowEasy,Booked,Meridian Tower - Search,No response after 2 calls
+2026-06-03 18:21:00,Zoya Sharma,zoya.sharma69@example.com,9535038049,Delhi,,Junk,,Ready to visit site
+2026-06-29 10:00:00,No Contact Person,,,Mumbai,,New,,Left without details
+2026-06-29 11:00:00,,,,Delhi,,Junk,,Completely blank lead
