@@ -34,7 +34,7 @@ samples/    Example messy CSVs (Facebook, Google Ads, real-estate CRM, manual sh
 ## Prerequisites
 
 - Node.js 20.9+
-- A [Gemini API key](https://aistudio.google.com/app/apikey) (free tier is enough for testing)
+- A [Gemini API key](https://aistudio.google.com/app/apikey) 
 
 ## Setup
 
