@@ -15,6 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "CSV Lead Importer | GrowEasy",
   description: "AI-powered CSV importer that maps any lead export into the GrowEasy CRM format.",
+  authors: [{ name: "Akshay Diddi", url: "mailto:diddiakshay731@gmail.com" }],
 };
 
 export default function RootLayout({

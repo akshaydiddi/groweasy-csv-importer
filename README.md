@@ -123,3 +123,7 @@ Frontend on `:3000`, backend on `:4000`.
 
 - **Frontend:** Next.js 16 (App Router), TypeScript, Tailwind CSS, react-dropzone, PapaParse, TanStack Virtual
 - **Backend:** Node.js, Express, TypeScript, Multer, PapaParse, `@google/generative-ai` (Gemini)
+
+## Author
+
+Built by **Akshay Diddi** — [diddiakshay731@gmail.com](mailto:diddiakshay731@gmail.com)

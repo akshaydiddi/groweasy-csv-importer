@@ -150,6 +150,12 @@ export default function Home() {
             <span>Schema validated</span>
           </span>
         </div>
+        <div className="mx-auto mt-3 max-w-6xl px-5 text-center text-[11px] text-[var(--muted)] sm:px-8">
+          Built by Akshay Diddi ·{" "}
+          <a href="mailto:diddiakshay731@gmail.com" className="underline decoration-dotted underline-offset-2 hover:text-[var(--foreground)]">
+            diddiakshay731@gmail.com
+          </a>
+        </div>
       </footer>
     </div>
   );
