@@ -53,28 +53,14 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="relative flex min-h-screen flex-col overflow-x-clip">
-      {/* ambient mesh gradient backdrop */}
-      <div aria-hidden className="pointer-events-none fixed inset-x-0 top-0 -z-10 h-[560px] overflow-hidden">
-        <div className="absolute inset-0" style={{ background: "var(--hero-gradient)" }} />
-        <div
-          className="mesh-blob anim-drift-a h-72 w-72 sm:h-96 sm:w-96"
-          style={{ background: "var(--brand)", top: "-6rem", left: "8%" }}
-        />
-        <div
-          className="mesh-blob anim-drift-b h-64 w-64 sm:h-80 sm:w-80"
-          style={{ background: "var(--accent)", top: "-3rem", right: "10%" }}
-        />
-        <div
-          className="mesh-blob anim-drift-c h-56 w-56 sm:h-72 sm:w-72"
-          style={{ background: "var(--brand-2)", top: "8rem", left: "45%" }}
-        />
-      </div>
+    <div className="relative flex min-h-screen flex-col">
+      {/* ambient hero gradient */}
+      <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[420px]" style={{ background: "var(--hero-gradient)" }} />
 
-      <header className="sticky top-0 z-20 border-b border-[var(--border)] bg-[var(--surface)]/75 backdrop-blur-xl">
+      <header className="sticky top-0 z-20 border-b border-[var(--border)] bg-[var(--surface)]/80 backdrop-blur-xl">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3.5 sm:px-8">
           <div className="flex items-center gap-3">
-            <div className="relative flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-[var(--brand)] to-[var(--brand-2)] text-[15px] font-extrabold text-white shadow-[0_6px_16px_-4px_var(--brand-glow)]">
+            <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-[var(--brand)] to-[#0c8a7f] text-[15px] font-extrabold text-white shadow-[0_6px_16px_-4px_var(--brand-glow)]">
               G
             </div>
             <div>
@@ -90,19 +76,21 @@ export default function Home() {
         </div>
       </header>
 
-      <main className="mx-auto w-full max-w-6xl flex-1 px-5 py-12 sm:px-8 sm:py-16">
-        <div className="anim-fade-up mb-11 text-center">
-          <h1 className="text-4xl font-extrabold tracking-tight text-[var(--foreground)] sm:text-5xl">
+      <main className="mx-auto w-full max-w-6xl flex-1 px-5 py-10 sm:px-8 sm:py-12">
+        <div className="anim-fade-up mb-9 text-center">
+          <h1 className="text-3xl font-extrabold tracking-tight text-[var(--foreground)] sm:text-4xl">
             Import leads from{" "}
-            <span className="gradient-text-flow">any CSV</span>
+            <span className="bg-gradient-to-r from-[var(--accent)] to-[var(--brand)] bg-clip-text text-transparent">
+              any CSV
+            </span>
           </h1>
-          <p className="mx-auto mt-3.5 max-w-xl text-sm leading-relaxed text-[var(--muted)] sm:text-base">
+          <p className="mx-auto mt-2.5 max-w-xl text-sm leading-relaxed text-[var(--muted)] sm:text-[15px]">
             Facebook exports, Google Ads, messy spreadsheets — drop the file and AI maps every column
             into clean GrowEasy CRM records.
           </p>
         </div>
 
-        <div className="anim-fade-up stagger-2 mx-auto mb-11 max-w-3xl">
+        <div className="anim-fade-up stagger-2 mx-auto mb-9 max-w-3xl">
           <StepIndicator current={step} />
         </div>
 
@@ -122,7 +110,7 @@ export default function Home() {
 
         <div
           key={step}
-          className="glass-card grain-overlay anim-fade-up rounded-[28px] p-5 shadow-[var(--card-shadow)] sm:p-9"
+          className="anim-fade-up rounded-3xl border border-[var(--border)] bg-[var(--surface)] p-5 shadow-[var(--card-shadow)] sm:p-8"
         >
           {step === "upload" && <UploadStep onFileAccepted={handleFileAccepted} />}
 
@@ -136,7 +124,7 @@ export default function Home() {
         </div>
 
         {step !== "upload" && step !== "results" && (
-          <div className="mt-6 flex justify-center">
+          <div className="mt-5 flex justify-center">
             <button
               type="button"
               onClick={handleReset}

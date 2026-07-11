@@ -22,11 +22,10 @@ export function StepIndicator({ current }: { current: StepKey }) {
             <div className="flex flex-col items-center gap-2 sm:flex-row sm:gap-3">
               <span
                 className={clsx(
-                  "relative flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-xs font-bold transition-all duration-300",
-                  isDone &&
-                    "bg-gradient-to-br from-[var(--brand)] to-[var(--brand-2)] text-white shadow-[0_4px_14px_-4px_var(--brand-glow)]",
+                  "relative flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-xs font-bold transition-all duration-300",
+                  isDone && "bg-[var(--brand)] text-white shadow-[0_4px_14px_-4px_var(--brand-glow)]",
                   isActive &&
-                    "bg-gradient-to-br from-[var(--accent)] to-[var(--accent-2)] text-white shadow-[0_4px_18px_-2px_var(--accent-glow)] anim-pulse-ring scale-105",
+                    "bg-[var(--accent)] text-white shadow-[0_4px_16px_-2px_var(--accent-glow)] anim-pulse-ring",
                   !isDone &&
                     !isActive &&
                     "border-2 border-[var(--border-strong)] bg-[var(--surface)] text-[var(--muted)]"
@@ -56,7 +55,7 @@ export function StepIndicator({ current }: { current: StepKey }) {
               <div className="relative mx-2 mt-[17px] h-[3px] flex-1 overflow-hidden rounded-full bg-[var(--border)] sm:mx-4">
                 <div
                   className={clsx(
-                    "absolute inset-y-0 left-0 rounded-full bg-gradient-to-r from-[var(--brand)] to-[var(--brand-2)] transition-all duration-700 ease-out",
+                    "absolute inset-y-0 left-0 rounded-full bg-gradient-to-r from-[var(--brand)] to-[var(--brand)] transition-all duration-700 ease-out",
                     isDone ? "w-full" : "w-0"
                   )}
                 />
